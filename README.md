@@ -31,38 +31,45 @@ How to search for old lost phrases:<br>
 Mode 0 (special)<br>
 It takes a line from the first file and processes all lines from the second file against it.<br>
 You can add suffixes, dates of birth, numbers, etc. No more than 50 million lines in dic.txt<br>
-The program stops once the additions are complete; there is a toolbar.
+The program stops once the additions are complete; there is a toolbar.<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -words2 dic2.txt -suffix 0 -bits 24```
+
 <hr>
 Mode 1<br>
 Generating all string with increment<br>
 abc -> abcabc -> abcabcabcabc<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24```
+
 <hr>
 Mode 2<br>
 Generating all string with increment<br>
 abc -> abc abc -> abc abc abc abc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 2```
+
 <hr>
 Mode 3<br>
 Generating all string with increment<br>
 abc -> Abcabc -> Abcabcabcabc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 3```
+
 <hr>
 Mode 4<br>
 Generating all string with increment<br>
 abc -> Abc abc -> Abc abc abc abc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 4```
+
 <hr>
 Mode 5<br>
 Generating all string with increment<br>
 abc -> AbcAbc -> AbcAbcAbcAbc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 5```
+
 <hr>
 Mode 6<br>
 Generating all string with increment<br>
 abc -> Abc Abc -> Abc Abc Abc Abc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 6```
+
 <hr><hr>
 
 **You can add a prefix (a fixed part at the beginning of the generated output)**
