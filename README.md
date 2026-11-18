@@ -216,6 +216,11 @@ Launch Type: jupyter<br>
 Windows use VS2022 + install CUDA 13.3
 <hr>
 
+**Unable to load a dictionary containing 2 billion lines.**
+
+The program loads file lines into high-speed memory, which has a limit of 50 million lines.
+<hr>
+
 **In what modes is the program looking for?**
 <br><br>
 She is looking for everyone at once.<br>
