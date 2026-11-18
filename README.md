@@ -28,50 +28,50 @@ The fact that one 4090 GPU runs in 24 hours is a legendary CPU program brainflay
 
 How to search for old lost phrases:<br>
 
-Mode 0 (special)
+Mode 0 (special)<br>
 It takes a line from the first file and processes all lines from the second file against it.<br>
 You can add suffixes, dates of birth, numbers, etc. No more than 50 million lines in dic.txt<br>
-The program stops once the additions are complete; there is a toolbar.<br>
+The program stops once the additions are complete; there is a toolbar.
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -words2 dic2.txt -suffix 0 -bits 24```
 
-Mode 1
+Mode 1<br>
 Generating all string with increment<br>
 abc -> abcabc -> abcabcabcabc<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24```
 
-Mode 2
+Mode 2<br>
 Generating all string with increment<br>
 abc -> abc abc -> abc abc abc abc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 2```
 
-Mode 3
+Mode 3<br>
 Generating all string with increment<br>
 abc -> Abcabc -> Abcabcabcabc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 3```
 
-Mode 4
+Mode 4<br>
 Generating all string with increment<br>
 abc -> Abc abc -> Abc abc abc abc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 4```
 
-Mode 5
+Mode 5<br>
 Generating all string with increment<br>
 abc -> AbcAbc -> AbcAbcAbcAbc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 5```
 
-Mode 6
+Mode 6<br>
 Generating all string with increment<br>
 abc -> Abc Abc -> Abc Abc Abc Abc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 6```
 
 You can add a prefix (a fixed part at the beginning of the generated output)
 
-```BrainWords.exe -a addresses.txt -root The -words dic.txt -suffix 0 -bits 24```
 Generating all string with increment<br>
 abc -> Theabcabc -> Theabcabcabcabc<br>
+```BrainWords.exe -a addresses.txt -root The -words dic.txt -suffix 0 -bits 24```
 
-With a space after the prefix
+With a space after the prefix<br>
 Generating all string with increment<br>
 abc -> The abcabc -> The abcabcabcabc<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24```
@@ -101,7 +101,7 @@ Add symbols, characters, etc., to the dic.txt file, each on a new line.
 What is the maximum length of a phrase?<br>
 Which languages ​​are supported?
 <br><br>
-Supports up to 240 characters.
+Supports up to 240 characters.<br>
 Includes all languages, logograms (hieroglyphs), Cyrillic script, etc.<br>
 Some languages, such as Japanese and Spanish, may present issues with longer phrases.<br>
 Be sure to test your specific language.
@@ -116,7 +116,7 @@ https://t.me/cuda8
 She didn't hang up! Program start 3090 --bits 24 (10 min.)<br>
 The program creates tables and downloads to the device<br>
 One card requires 4GB or more of RAM to work.<br>
-The consumption depends on the size of the table (--bits) and the size of the address file.<br>
+The consumption depends on the size of the table (--bits) and the size of the address file.
 <hr>
 
 **What address formats can be uploaded?**
@@ -139,7 +139,7 @@ Example 9 characters (alphabet 64 characters or 64 words)<br>
 Use ```-suffix 281474976710656```<br>
 <hr>
 
-**Explain what we are looking for?**
+**Explain what we are looking for?** <br>
 **How it works? What's this?**
 <br><br>
 Here is a good example of work for you.<br>
@@ -176,7 +176,16 @@ The program is NOT multigpu. For each card, indicate your id<br>
 
 **Why does the program use a lot of RAM?**
 <br><br>
-The program creates the necessary tables and stores them in memory.
+The program creates the necessary tables and stores them in memory -bits 24 = 4.6 GB RAM.<br>
+RAM is also used to store the address database and RIPEMD-160 hashes.
+<hr>
+
+**Unable to launch using the BTC history database.**<br>
+**The database contains only 1... P2PKH and P2PKH_UNCOMPRESSED addresses.**
+
+To fit this database onto a 24 GB card, specify `-bits 8` or `-bits 4`<br>
+The processing speed will be lower, but the program will be able to run using the history data.<br>
+There are no issues with 32 GB cards.
 <hr>
 
 **Does the program require an internet connection?**
