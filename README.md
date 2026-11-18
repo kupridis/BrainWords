@@ -65,6 +65,9 @@ Generating all string with increment<br>
 abc -> Abc Abc -> Abc Abc Abc Abc...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 6```
 
+
+
+
 You can add a prefix (a fixed part at the beginning of the generated output)
 
 Generating all string with increment<br>
@@ -76,6 +79,9 @@ Generating all string with increment<br>
 abc -> The abcabc -> The abcabcabcabc<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24```
 
+
+
+
 Reading phrases from a file; long lines are supported.
 
 ```BrainWords.exe -a addresses.txt -inputPhrase phrases.txt -bits 8```
@@ -83,6 +89,10 @@ Reading phrases from a file; long lines are supported.
 Reading phrases from an external generator (slow speed)
 
 ```py gen.py | BrainWords.exe -a addresses.txt -inputIn -bits 8```
+
+
+
+
 
 
 **Linux The same commands**
@@ -105,6 +115,7 @@ Supports up to 240 characters.<br>
 Includes all languages, logograms (hieroglyphs), Cyrillic script, etc.<br>
 Some languages, such as Japanese and Spanish, may present issues with longer phrases.<br>
 Be sure to test your specific language.
+<hr>
 
 **How to buy the program?**
 <br><br>
@@ -164,7 +175,7 @@ See hire generation [https://brainwalletx.github.io](https://brainwalletx.github
 Were there any finds at all?
 <br><br>
 Here is a white list of passwords, phrases, balances, study<br>
-https://privatekeyfinder.io/brainwallet/bitcoin/
+https://privatekeyfinder.io/brainwallet/bitcoin/<br>
 FOUNDS Download https://github.com/kupridis/BrainWords/blob/main/Brainwallet_Found.txt
 <hr>
 
@@ -195,7 +206,7 @@ No, the program is looking for the key offline.
 
 **The program is sold with source code?**
 <br><br>
-Yes, the program is sold with original source code v1.0 and instructions
+Yes, the program is sold with original source code v1.0 and instructions<br>
 For linux Makefile, for Win VS2019 files.
 <hr>
 
