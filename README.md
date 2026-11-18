@@ -95,7 +95,8 @@ abc -> The abc abc -> The abc abc abc abc<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24 -mode 2```
 
 <hr><hr>
-**Reading phrases from a file; long lines are supported.**
+
+**Reading phrases from a file, long lines are supported.**
 
 ```BrainWords.exe -a addresses.txt -inputPhrase phrases.txt -bits 8```
 
