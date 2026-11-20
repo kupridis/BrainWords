@@ -1,4 +1,9 @@
-# Private SOFT BrainWords v1.0 new 
+# Private SOFT BrainWords v1.1 new 
+
+v1.1 NEW:<br>
+Added a check for all iterations up to the specified one<br>
+USE -iterations 100
+
 
 ## Find Lost Bitcoin phrases (Brainwallet GPU)
 Search phrases on the fastest program in the world<br>
@@ -261,7 +266,7 @@ Addresses 1 (uncompressed + compressed), addresses 3... and bc...
 ```-a``` file list of addresses of BTC in a text file from a new line<br>
 ```-inputPhrase``` Filename for reading phrases from a file<br>
 ```-inputIn``` Receive a stream of phrases from an external generator<br>
-```-iteration``` Number of iterations SHA256<br>
+```-iterations``` Number of iterations SHA256<br>
 ```-root``` text Fixed left part in generation ```-root 1234``` or ```-root " 1234 1234"``` with space<br>
 ```-b``` Number of GPU blocks (default set automatically)<br>
 ```-t``` Number of GPU cores (default set automatically)<br>
