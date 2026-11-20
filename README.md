@@ -6,6 +6,9 @@ USE -iterations 100
 
 
 ## Find Lost Bitcoin phrases (Brainwallet GPU)
+
+<img width="1280" height="709" alt="photo_2026-11-18_21-45-14" src="https://github.com/user-attachments/assets/bf51c58f-d793-4bb9-ace6-f8134f31374f" />
+
 Search phrases on the fastest program in the world<br>
 22,052 passphrases were found, an estimated 5,000 passphrases are lost<br>
 They were found on a processor with a maximum speed of 100,000 passphrases per second.<br>
