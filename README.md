@@ -212,7 +212,7 @@ This method was used 10-15 years ago. At that time, coins were worth almost noth
 Passwords were lost and forgotten. Do you remember your password 12 years ago? Are you sure?<br>
 One character, dot or register is wrong and the entire wallet is lost. There is no restore button.<br>
 Look for more information about brain wallet on the Internet.<br>
-See hire generation [https://brainwalletx.github.io](https://brainwalletx.github.io)
+See hire generation [brainwalletx](https://brainwalletx.github.io)
 <hr>
 
 **What does Brain Wallet look like?**
@@ -221,7 +221,7 @@ Were there any finds at all?
 <br><br>
 Here is a white list of passwords, phrases, balances, study<br>
 https://privatekeyfinder.io/brainwallet/bitcoin/<br>
-FOUNDS Download https://github.com/kupridis/BrainWords/blob/main/Brainwallet_Found.txt
+FOUNDS brain wallet [**Download**](https://github.com/kupridis/BrainWords/blob/main/Brainwallet_Found.txt)
 <hr>
 
 **Multigpu program?**
