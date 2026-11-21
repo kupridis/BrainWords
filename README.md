@@ -108,7 +108,7 @@ hello -> The hello hello -> The hello hello hello hello ...<br>
 
 **Reading phrases from a file, long lines are supported.**
 
-```BrainWords.exe -a addresses.txt -inputPhrase phrases.txt -bits 8```
+```BrainWords.exe -a addresses.txt -file phrases.txt -bits 8```
 
 Reading phrases from an external generator (slow speed)
 
@@ -269,7 +269,7 @@ Addresses 1 (uncompressed + compressed), addresses 3... and bc...
 ```-bits``` Number of bits to generate table 8, 16, 20, 24<br>
 ```-fstatus``` File name status (default fileStatus.txt)<br>
 ```-a``` file list of addresses of BTC in a text file from a new line<br>
-```-inputPhrase``` Filename for reading phrases from a file<br>
+```-file``` Filename for reading phrases from a file<br>
 ```-inputIn``` Receive a stream of phrases from an external generator<br>
 ```-iterations``` Number of iterations SHA256<br>
 ```-root``` text Fixed left part in generation ```-root 1234``` or ```-root " 1234 1234"``` with space<br>
