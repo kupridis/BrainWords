@@ -1,9 +1,15 @@
-# Private SOFT BrainWords v1.1 new 
+# Private SOFT BrainWords v1.5 new 
 
 v1.1 NEW:<br>
 Added a check for all iterations up to the specified one<br>
 USE -iterations 100
 
+v1.5  NEW:<br> 
+A new mode, `-plus num`, has been added. It adds +1 to the resulting private key.<br>
+For example, `-plus 10` will perform this +1 operation sequentially, with a leftward shift.<br>
+The program now saves a table of precomputed points upon its first run. <br>
+By default, this uses 24 bits and takes 12–15 minutes to generate; on subsequent runs, the table loads in just a few seconds. <br>
+If your graphics card has 12 GB of VRAM or less, please use the `-bits 16` flag.
 
 ## Find Lost Bitcoin phrases (Brainwallet GPU)
 
@@ -36,88 +42,107 @@ The fact that one 4090 GPU runs in 24 hours is a legendary CPU program brainflay
 
 ## How to search for old lost phrases:<br>
 
-**For quick tests use -bits 16**
-
 Mode 0 (special)<br>
 It takes a line from the first file and processes all lines from the second file against it.<br>
 You can add suffixes, dates of birth, numbers, etc. No more than 50 million lines in dic.txt<br>
 The program stops once the additions are complete; there is a toolbar.<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -words2 dic2.txt -suffix 0 -bits 24```
+```BrainWords.exe -a addresses.txt -words dic.txt -words2 dic2.txt -suffix 0```
 
 <hr>
 Mode 1<br>
 Generating all string from dic.txt with increment<br>
 hello -> hellohello -> hellohellohello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24```
+```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0```
 
 <hr>
 Mode 2<br>
 Generating all string from dic.txt with increment<br>
 hello -> hello hello -> hello hello hello hello hello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 2```
+```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 2```
 
 <hr>
 Mode 3<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hellohello -> Hellohellohello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 3```
+```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 3```
 
 <hr>
 Mode 4<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hello hello -> Hello hello hello hello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 4```
+```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 4```
 
 <hr>
 Mode 5<br>
 Generating all string from dic.txt with increment<br>
 hello -> HelloHello -> HelloHelloHelloHello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 5```
+```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 5```
 
 <hr>
 Mode 6<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 6```
+```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 6```
+
+
+### Mode -plus 10 Example
+| -plus | privkey | address | Types | iteration | passphrase |
+|----------|----|-------------|----------|----|-------------|
+|    | A95F765E8664EC9B2926B80887B912DFB1EAF0581DC8B703C6550F2DD16BAA4A | 1Q8JAgSjS2jzokCTABSfy3uPwDXD2QKCB2 | P2PKH_UNCOMPRESSED | 1 | Nabeel Siddiqui |
+| +1 | A95F765E8664EC9B2926B80887B912DFB1EAF0581DC8B703C6550F2DD16BAA4B | 1P7c4ALx4fRTnw47DrVarvk4UAUsF268TJ | P2PKH_UNCOMPRESSED | 1 | Nabeel Siddiqui |
+| +1 | A95F765E8664EC9B2926B80887B912DFB1EAF0581DC8B703C6550F2DD16BAA4C | 1K6Tbk1fp2TSSvc5bGxtgio6SJsXi3mTMD | P2PKH_UNCOMPRESSED | 1 | Nabeel Siddiqui |
+
+If `-plus 1000` is specified, 1000 hex values ​​of +1 will be added.<br> 
+The addition supports a leftward hex offset.<br> 
+The speed will decrease by a factor of several.
+
+```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -plus 16```
+
+```BrainWords.exe -a addresses.txt -file big_dic.txt -plus 16```
 
 <hr><hr>
 
 **You can add a prefix (a fixed part at the beginning of the generated output)** <br>
 Generating all string from dic.txt with increment<br>
 hello -> Thehellohello -> Thehellohellohello ...<br>
-```BrainWords.exe -a addresses.txt -root The -words dic.txt -suffix 0 -bits 24```
+```BrainWords.exe -a addresses.txt -root The -words dic.txt -suffix 0```
 
 With a space after the prefix<br>
 Generating all string from dic.txt with increment<br>
 hello -> The hellohello -> The hellohellohellohello ...<br>
-```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24```
+```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0```
 
 With a space after the prefix<br>
 Generating all string from dic.txt with increment<br>
 hello -> The hello hello -> The hello hello hello hello ...<br>
-```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24 -mode 2```
+```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -mode 2```
 
 <hr><hr>
 
 **Reading phrases from a file, long lines are supported.**
 
-```BrainWords.exe -a addresses.txt -file phrases.txt -bits 8```
+```BrainWords.exe -a addresses.txt -file phrases.txt```
 
 Reading phrases from an external generator (slow speed)
 
-```py gen.py | BrainWords.exe -a addresses.txt -inputIn -bits 8```
+```py gen.py | BrainWords.exe -a addresses.txt -inputIn```
+
 
 **Linux The same commands**
 
 ```chmod +x BrainWords```<br>
-```./BrainWords -a addresses.txt -words dic.txt -suffix 0 -bits 24```
+```./BrainWords -a addresses.txt -words dic.txt -suffix 0```
+
+
+
+
 
 
 ### Frequently asked Questions
@@ -130,7 +155,7 @@ Add symbols, characters, etc., to the dic.txt file, each on a new line.
 What is the maximum length of a phrase?<br>
 Which languages ​​are supported?
 <br><br>
-Supports up to 240 characters.<br>
+Supports up to 250 characters.<br>
 Includes all languages, logograms (hieroglyphs), Cyrillic script, etc.<br>
 Some languages, such as Japanese and Spanish, may present issues with longer phrases.<br>
 Be sure to test your specific language.
@@ -143,10 +168,11 @@ https://t.me/cuda8
 
 **Why did the program freeze at startup?**
 <br><br>
-She didn't hang up! Program start 3090 --bits 24 (10 min.)<br>
-The program creates tables and downloads to the device<br>
-One card requires 4GB or more of RAM to work.<br>
-The consumption depends on the size of the table (--bits) and the size of the address file.
+The program runs only the very first time.<br>
+She didn't hang up! Program start 4090 -bits 24 (12 min.)<br>
+The program creates tables and downloads to the device and save eclum_24.bin<br>
+One card requires 5 GB or more of RAM to work.<br>
+The consumption depends on the size of the table (-bits) and the size of the address file.
 <hr>
 
 **What address formats can be uploaded?**
@@ -185,7 +211,7 @@ At the address, people stored coins there, a passphrase in their heads.<br>
 This method was used 10-15 years ago. At that time, coins were worth almost nothing.<br>
 Passwords were lost and forgotten. Do you remember your password 12 years ago? Are you sure?<br>
 One character, dot or register is wrong and the entire wallet is lost. There is no restore button.<br>
-Look for more information about brain wallet on the Internet.
+Look for more information about brain wallet on the Internet.<br>
 See hire generation [https://brainwalletx.github.io](https://brainwalletx.github.io)
 <hr>
 
@@ -206,7 +232,7 @@ The program is NOT multigpu. For each card, indicate your id<br>
 
 **Why does the program use a lot of RAM?**
 <br><br>
-The program creates the necessary tables and stores them in memory -bits 24 = 4.6 GB RAM.<br>
+The program creates the necessary tables and stores them in memory -bits 24 = 5.6 GB RAM.<br>
 RAM is also used to store the address database and RIPEMD-160 hashes.
 <hr>
 
@@ -215,7 +241,8 @@ RAM is also used to store the address database and RIPEMD-160 hashes.
 
 To fit this database onto a 24 GB card, specify `-bits 8` or `-bits 4`<br>
 The processing speed will be lower, but the program will be able to run using the history data.<br>
-There are no issues with 32 GB cards.
+There are no issues with 32 GB cards.<br>
+64 GB of RAM will not be enough; increase the page file size.
 <hr>
 
 **Does the program require an internet connection?**
@@ -248,7 +275,9 @@ Windows use VS2022 + install CUDA 13.3
 
 **Unable to load a dictionary containing 2 billion lines.**
 
-The program loads file lines into high-speed memory, which has a limit of 50 million lines.
+-words and -words2<br>
+The program loads file lines into high-speed memory, which has a limit of 50 million lines.<br>
+Use -file big_file.txt to read files up to 256 TB line by line.
 <hr>
 
 **In what modes is the program looking for?**
@@ -265,6 +294,7 @@ Addresses 1 (uncompressed + compressed), addresses 3... and bc...
 ```-words``` file.txt in which letters or words are on new lines<br>
 ```-words2``` file2.txt in which letters or words are on new lines<br>
 ```-mode``` num Capitalization and word-spacing modes<br>
+```-plus``` num Specify how much we will add to the private key (+1)<br>
 ```-o``` File for saving the result (default is FOUND.txt)<br>
 ```-bits``` Number of bits to generate table 8, 16, 20, 24<br>
 ```-fstatus``` File name status (default fileStatus.txt)<br>
