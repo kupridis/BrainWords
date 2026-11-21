@@ -46,7 +46,7 @@ The program stops once the additions are complete; there is a toolbar.<br>
 <hr>
 Mode 1<br>
 Generating all string with increment<br>
-hello -> hellohello -> hellohellohello...<br>
+hello -> hellohello -> hellohellohello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24```
 
@@ -94,7 +94,7 @@ hello -> Thehellohello -> Thehellohellohello ...<br>
 
 With a space after the prefix<br>
 Generating all string with increment<br>
-hello -> The hellohello -> The hellohellohellohello<br>
+hello -> The hellohello -> The hellohellohellohello ...<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24```
 
 With a space after the prefix<br>
