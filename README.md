@@ -36,6 +36,8 @@ The fact that one 4090 GPU runs in 24 hours is a legendary CPU program brainflay
 
 How to search for old lost phrases:<br>
 
+For quick tests use -bits 16
+
 Mode 0 (special)<br>
 It takes a line from the first file and processes all lines from the second file against it.<br>
 You can add suffixes, dates of birth, numbers, etc. No more than 50 million lines in dic.txt<br>
@@ -45,42 +47,42 @@ The program stops once the additions are complete; there is a toolbar.<br>
 
 <hr>
 Mode 1<br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> hellohello -> hellohellohello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24```
 
 <hr>
 Mode 2<br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> hello hello -> hello hello hello hello hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 2```
 
 <hr>
 Mode 3<br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> Hellohello -> Hellohellohello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 3```
 
 <hr>
 Mode 4<br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> Hello hello -> Hello hello hello hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 4```
 
 <hr>
 Mode 5<br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> HelloHello -> HelloHelloHelloHello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 5```
 
 <hr>
 Mode 6<br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 6```
@@ -88,17 +90,17 @@ hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 <hr><hr>
 
 **You can add a prefix (a fixed part at the beginning of the generated output)** <br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> Thehellohello -> Thehellohellohello ...<br>
 ```BrainWords.exe -a addresses.txt -root The -words dic.txt -suffix 0 -bits 24```
 
 With a space after the prefix<br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> The hellohello -> The hellohellohellohello ...<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24```
 
 With a space after the prefix<br>
-Generating all string with increment<br>
+Generating all string from dic.txt with increment<br>
 hello -> The hello hello -> The hello hello hello hello ...<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24 -mode 2```
 
