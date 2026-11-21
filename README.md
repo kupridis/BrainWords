@@ -34,9 +34,9 @@ The fact that one 4090 GPU runs in 24 hours is a legendary CPU program brainflay
 
 * 1 MKey = 1000000 passwords or words per sec.
 
-How to search for old lost phrases:<br>
+## How to search for old lost phrases:<br>
 
-For quick tests use -bits 16
+**For quick tests use -bits 16**
 
 Mode 0 (special)<br>
 It takes a line from the first file and processes all lines from the second file against it.<br>
