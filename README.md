@@ -46,42 +46,42 @@ The program stops once the additions are complete; there is a toolbar.<br>
 <hr>
 Mode 1<br>
 Generating all string with increment<br>
-abc -> abcabc -> abcabcabcabc<br>
+hello -> hellohello -> hellohellohello...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24```
 
 <hr>
 Mode 2<br>
 Generating all string with increment<br>
-abc -> abc abc -> abc abc abc abc...<br>
+hello -> hello hello -> hello hello hello hello hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 2```
 
 <hr>
 Mode 3<br>
 Generating all string with increment<br>
-abc -> Abcabc -> Abcabcabcabc...<br>
+hello -> Hellohello -> Hellohellohello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 3```
 
 <hr>
 Mode 4<br>
 Generating all string with increment<br>
-abc -> Abc abc -> Abc abc abc abc...<br>
+hello -> Hello hello -> Hello hello hello hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 4```
 
 <hr>
 Mode 5<br>
 Generating all string with increment<br>
-abc -> AbcAbc -> AbcAbcAbcAbc...<br>
+hello -> HelloHello -> HelloHelloHelloHello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 5```
 
 <hr>
 Mode 6<br>
 Generating all string with increment<br>
-abc -> Abc Abc -> Abc Abc Abc Abc...<br>
+hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -bits 24 -mode 6```
 
@@ -89,17 +89,17 @@ abc -> Abc Abc -> Abc Abc Abc Abc...<br>
 
 **You can add a prefix (a fixed part at the beginning of the generated output)** <br>
 Generating all string with increment<br>
-abc -> Theabcabc -> Theabcabcabcabc<br>
+hello -> Thehellohello -> Thehellohellohello ...<br>
 ```BrainWords.exe -a addresses.txt -root The -words dic.txt -suffix 0 -bits 24```
 
 With a space after the prefix<br>
 Generating all string with increment<br>
-abc -> The abcabc -> The abcabcabcabc<br>
+hello -> The hellohello -> The hellohellohellohello<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24```
 
 With a space after the prefix<br>
 Generating all string with increment<br>
-abc -> The abc abc -> The abc abc abc abc<br>
+hello -> The hello hello -> The hello hello hello hello ...<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -bits 24 -mode 2```
 
 <hr><hr>
