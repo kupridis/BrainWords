@@ -42,7 +42,7 @@ The fact that one 4090 GPU runs in 24 hours is a legendary CPU program brainflay
 
 ## How to search for old lost phrases:<br>
 
-Mode 0 (special)<br>
+### Mode 0 (special)<br>
 It takes a line from the first file and processes all lines from the second file against it.<br>
 You can add suffixes, dates of birth, numbers, etc. No more than 50 million lines in dic.txt<br>
 The program stops once the additions are complete; there is a toolbar.<br>
@@ -50,42 +50,48 @@ The program stops once the additions are complete; there is a toolbar.<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -words2 dic2.txt -suffix 0```
 
 <hr>
-Mode 1<br>
+
+### Mode 1<br>
 Generating all string from dic.txt with increment<br>
 hello -> hellohello -> hellohellohello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0```
 
 <hr>
-Mode 2<br>
+
+### Mode 2<br>
 Generating all string from dic.txt with increment<br>
 hello -> hello hello -> hello hello hello hello hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 2```
 
 <hr>
-Mode 3<br>
+
+### Mode 3<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hellohello -> Hellohellohello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 3```
 
 <hr>
-Mode 4<br>
+
+### Mode 4<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hello hello -> Hello hello hello hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 4```
 
 <hr>
-Mode 5<br>
+
+### Mode 5<br>
 Generating all string from dic.txt with increment<br>
 hello -> HelloHello -> HelloHelloHelloHello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 5```
 
 <hr>
-Mode 6<br>
+
+### Mode 6<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 
@@ -93,7 +99,7 @@ hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 
 <hr>
 
-Mode -plus 10 Example
+### Mode -plus 10 Example
 
 | -plus | privkey | address | Types | iteration | passphrase |
 |----------|----|-------------|----------|----|-------------|
@@ -109,7 +115,7 @@ The speed will decrease by a factor of several.
 
 ```BrainWords.exe -a addresses.txt -file big_dic.txt -plus 16```
 
-<hr><hr>
+<hr>
 
 **You can add a prefix (a fixed part at the beginning of the generated output)** <br>
 Generating all string from dic.txt with increment<br>
@@ -126,9 +132,9 @@ Generating all string from dic.txt with increment<br>
 hello -> The hello hello -> The hello hello hello hello ...<br>
 ```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -mode 2```
 
-<hr><hr>
+<hr>
 
-**Reading phrases from a file, long lines are supported.**
+### Reading phrases from a file, long lines are supported.
 
 ```BrainWords.exe -a addresses.txt -file phrases.txt```
 
@@ -137,14 +143,32 @@ Reading phrases from an external generator (slow speed)
 ```py gen.py | BrainWords.exe -a addresses.txt -inputIn```
 
 
-**Linux The same commands**
 
+**Linux The same commands**<br>
 ```chmod +x BrainWords```<br>
 ```./BrainWords -a addresses.txt -words dic.txt -suffix 0```
 
+## Frequently asked Questions
 
+### What arguments are there in the program?
 
-### Frequently asked Questions
+```-suffix``` Number o combination to start from ```-suffix 0```<br>
+```-d``` number of the required GPU ```-d 0``` or ```-d 1``` ... ```-d 11```<br>
+```-words``` file.txt in which letters or words are on new lines<br>
+```-words2``` file2.txt in which letters or words are on new lines<br>
+```-mode``` num Capitalization and word-spacing modes<br>
+```-plus``` num Specify how much we will add to the private key (+1)<br>
+```-o``` File for saving the result (default is FOUND.txt)<br>
+```-bits``` Number of bits to generate table 8, 16, 20, 24<br>
+```-fstatus``` File name status (default fileStatus.txt)<br>
+```-a``` file list of addresses of BTC in a text file from a new line<br>
+```-file``` Filename for reading phrases from a file<br>
+```-inputIn``` Receive a stream of phrases from an external generator<br>
+```-iterations``` Number of iterations SHA256<br>
+```-root``` text Fixed left part in generation ```-root 1234``` or ```-root " 1234 1234"``` with space<br>
+```-b``` Number of GPU blocks (default set automatically)<br>
+```-t``` Number of GPU cores (default set automatically)<br>
+<hr>
 
 **How do I search alphabetically?**
 <br><br>
@@ -283,25 +307,5 @@ Use -file big_file.txt to read files up to 256 TB line by line.
 <br><br>
 She is looking for everyone at once.<br>
 Addresses 1 (uncompressed + compressed), addresses 3... and bc...
-<hr>
+<hr><hr>
 
-**What arguments are there in the program?**
-<br><br>
-
-```-suffix``` Number o combination to start from ```-suffix 0```<br>
-```-d``` number of the required GPU ```-d 0``` or ```-d 1``` ... ```-d 11```
-```-words``` file.txt in which letters or words are on new lines<br>
-```-words2``` file2.txt in which letters or words are on new lines<br>
-```-mode``` num Capitalization and word-spacing modes<br>
-```-plus``` num Specify how much we will add to the private key (+1)<br>
-```-o``` File for saving the result (default is FOUND.txt)<br>
-```-bits``` Number of bits to generate table 8, 16, 20, 24<br>
-```-fstatus``` File name status (default fileStatus.txt)<br>
-```-a``` file list of addresses of BTC in a text file from a new line<br>
-```-file``` Filename for reading phrases from a file<br>
-```-inputIn``` Receive a stream of phrases from an external generator<br>
-```-iterations``` Number of iterations SHA256<br>
-```-root``` text Fixed left part in generation ```-root 1234``` or ```-root " 1234 1234"``` with space<br>
-```-b``` Number of GPU blocks (default set automatically)<br>
-```-t``` Number of GPU cores (default set automatically)<br>
-<hr>
