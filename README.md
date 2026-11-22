@@ -47,7 +47,7 @@ It takes a line from the first file and processes all lines from the second file
 You can add suffixes, dates of birth, numbers, etc. No more than 50 million lines in dic.txt<br>
 The program stops once the additions are complete; there is a toolbar.<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -words2 dic2.txt -suffix 0```
+```BrainWords.exe -a addresses.txt -words dic.txt -words2 dic2.txt```
 
 <hr>
 
@@ -55,7 +55,7 @@ The program stops once the additions are complete; there is a toolbar.<br>
 Generating all string from dic.txt with increment<br>
 hello -> hellohello -> hellohellohello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0```
+```BrainWords.exe -a addresses.txt -words dic.txt```
 
 <hr>
 
@@ -63,7 +63,7 @@ hello -> hellohello -> hellohellohello ...<br>
 Generating all string from dic.txt with increment<br>
 hello -> hello hello -> hello hello hello hello hello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 2```
+```BrainWords.exe -a addresses.txt -words dic.txt -mode 2```
 
 <hr>
 
@@ -71,7 +71,7 @@ hello -> hello hello -> hello hello hello hello hello ...<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hellohello -> Hellohellohello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 3```
+```BrainWords.exe -a addresses.txt -words dic.txt -mode 3```
 
 <hr>
 
@@ -79,7 +79,7 @@ hello -> Hellohello -> Hellohellohello ...<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hello hello -> Hello hello hello hello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 4```
+```BrainWords.exe -a addresses.txt -words dic.txt -mode 4```
 
 <hr>
 
@@ -87,7 +87,7 @@ hello -> Hello hello -> Hello hello hello hello ...<br>
 Generating all string from dic.txt with increment<br>
 hello -> HelloHello -> HelloHelloHelloHello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 5```
+```BrainWords.exe -a addresses.txt -words dic.txt -mode 5```
 
 <hr>
 
@@ -95,7 +95,24 @@ hello -> HelloHello -> HelloHelloHelloHello ...<br>
 Generating all string from dic.txt with increment<br>
 hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 6```
+```BrainWords.exe -a addresses.txt -words dic.txt -mode 6```
+
+<hr>
+
+**You can add a prefix (a fixed part at the beginning of the generated output)** <br>
+Generating all string from dic.txt with increment<br>
+hello -> Thehellohello -> Thehellohellohello ...<br>
+```BrainWords.exe -a addresses.txt -root The -words dic.txt```
+
+With a space after the prefix<br>
+Generating all string from dic.txt with increment<br>
+hello -> The hellohello -> The hellohellohellohello ...<br>
+```BrainWords.exe -a addresses.txt -root "The " -words dic.txt```
+
+With a space after the prefix<br>
+Generating all string from dic.txt with increment<br>
+hello -> The hello hello -> The hello hello hello hello ...<br>
+```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -mode 2```
 
 <hr>
 
@@ -111,26 +128,10 @@ If `-plus 1000` is specified, 1000 hex values ​​of +1 will be added.<br>
 The addition supports a leftward hex offset.<br> 
 The speed will decrease by a factor of several.
 
-```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -plus 16```
+```BrainWords.exe -a addresses.txt -words dic.txt -plus 16```
 
 ```BrainWords.exe -a addresses.txt -file big_dic.txt -plus 16```
 
-<hr>
-
-**You can add a prefix (a fixed part at the beginning of the generated output)** <br>
-Generating all string from dic.txt with increment<br>
-hello -> Thehellohello -> Thehellohellohello ...<br>
-```BrainWords.exe -a addresses.txt -root The -words dic.txt -suffix 0```
-
-With a space after the prefix<br>
-Generating all string from dic.txt with increment<br>
-hello -> The hellohello -> The hellohellohellohello ...<br>
-```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0```
-
-With a space after the prefix<br>
-Generating all string from dic.txt with increment<br>
-hello -> The hello hello -> The hello hello hello hello ...<br>
-```BrainWords.exe -a addresses.txt -root "The " -words dic.txt -suffix 0 -mode 2```
 
 <hr>
 
@@ -146,13 +147,13 @@ Reading phrases from an external generator (slow speed)
 
 **Linux The same commands**<br>
 ```chmod +x BrainWords```<br>
-```./BrainWords -a addresses.txt -words dic.txt -suffix 0```
+```./BrainWords -a addresses.txt -words dic.txt```
 
 ## Frequently asked Questions
 
 ### What arguments are there in the program?
 
-```-suffix``` Number o combination to start from ```-suffix 0```<br>
+```-suffix``` Number o combination to start from (or continuing) ```-suffix 0```<br>
 ```-d``` number of the required GPU ```-d 0``` or ```-d 1``` ... ```-d 11```<br>
 ```-words``` file.txt in which letters or words are on new lines<br>
 ```-words2``` file2.txt in which letters or words are on new lines<br>
@@ -206,7 +207,7 @@ BTC bc.., 3.., 1.., in a text file from a new line<br>
 **How to continue searching after stopping the program?**
 <br><br>
 The program saves the position in fileStatus.txt<br>
-You can start from any position by specifying ```-suffix 1234567```<br>
+You can start from any position by specifying ```-suffix 94534567```<br>
 For convenience, the file contains ready-to-use commands to continue.
 <hr>
 
