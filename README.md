@@ -118,10 +118,6 @@ hello -> The hello hello -> The hello hello hello hello ...<br>
 
 ### Mode -plus 10 Example
 
-<img width="1606" height="1343" alt="Untitled" src="https://github.com/user-attachments/assets/86a1734d-673b-4f09-85d1-d5567272c53f" />
-
-* In the screenshot above, 256 keys are being checked for each password.<br>
-
 | -plus | privkey | address | Types | iteration | passphrase |
 |----------|----|-------------|----------|----|-------------|
 |    | A95F765E8664EC9B2926B80887B912DFB1EAF0581DC8B703C6550F2DD16BAA4A | 1Q8JAgSjS2jzokCTABSfy3uPwDXD2QKCB2 | P2PKH_UNCOMPRESSED | 1 | Nabeel Siddiqui |
@@ -131,7 +127,6 @@ hello -> The hello hello -> The hello hello hello hello ...<br>
 If `-plus 1000` is specified, 1000 hex values ​​of +1 will be added.<br> 
 The addition supports a leftward hex offset.<br> 
 The speed will decrease by a factor of several. <br>
-To get the actual speed, you need to multiply the speed by the number following -plus<br>
 
 ```BrainWords.exe -a addresses.txt -file big_dic.txt -plus 16```
 
