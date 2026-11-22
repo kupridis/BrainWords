@@ -92,7 +92,8 @@ hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 6```
 
 
-### Mode -plus 10 Example
+Mode -plus 10 Example
+
 | -plus | privkey | address | Types | iteration | passphrase |
 |----------|----|-------------|----------|----|-------------|
 |    | A95F765E8664EC9B2926B80887B912DFB1EAF0581DC8B703C6550F2DD16BAA4A | 1Q8JAgSjS2jzokCTABSfy3uPwDXD2QKCB2 | P2PKH_UNCOMPRESSED | 1 | Nabeel Siddiqui |
@@ -139,9 +140,6 @@ Reading phrases from an external generator (slow speed)
 
 ```chmod +x BrainWords```<br>
 ```./BrainWords -a addresses.txt -words dic.txt -suffix 0```
-
-
-
 
 
 
