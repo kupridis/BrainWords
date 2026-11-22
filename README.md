@@ -91,6 +91,7 @@ hello -> Hello Hello -> Hello Hello Hello Hello ...<br>
 
 ```BrainWords.exe -a addresses.txt -words dic.txt -suffix 0 -mode 6```
 
+<hr>
 
 Mode -plus 10 Example
 
