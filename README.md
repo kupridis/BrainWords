@@ -1,5 +1,7 @@
 # Private SOFT BrainWords v1.5 new 
 
+If you find any bugs, please let me know @phrutis
+
 v1.1 NEW:<br>
 Added a check for all iterations up to the specified one<br>
 USE -iterations 100
